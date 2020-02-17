@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
+import sys
 from csvHandler import CsvHandler
 
 def main():
     csv = CsvHandler()
-    csv.read()
+    try:
+        csv.read(sys.argv[1])
+    except:
+        print("Please enter the csv you would parse.")
 
 if __name__=="__main__":
     main()
