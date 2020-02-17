@@ -1,9 +1,0 @@
-#!/usr/bin/env python3
-from csvReader import CsvReader
-
-def main():
-    csv = CsvReader()
-    csv.read()
-
-if __name__=="__main__":
-    main()
