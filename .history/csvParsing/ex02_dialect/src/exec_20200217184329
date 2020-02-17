@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 
 from csvHandler import CsvHandler
-
+import sys
 #Ici, nous ajoutons grace à la librairie sys la possibilité
 # de recuperer une input clavier lors de l'execution du script
-import sys
 
 def main():
     csv = CsvHandler()
 
-    #Ajout d'une gestion d'erreur dans le cas où aucun argument n'aurais
-    #été fournis lors de l'execution du script
+
     try:
         csv.read(sys.argv[1])
     except:

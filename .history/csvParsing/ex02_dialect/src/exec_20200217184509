@@ -10,7 +10,7 @@ def main():
     csv = CsvHandler()
 
     #Ajout d'une gestion d'erreur dans le cas où aucun argument n'aurais
-    #été fournis lors de l'execution du script
+    #étê fournis lors de l'execution du script
     try:
         csv.read(sys.argv[1])
     except:

@@ -13,6 +13,7 @@ def main():
     #été fournis lors de l'execution du script
     try:
         csv.read(sys.argv[1])
+    #
     except:
         print("Please enter the csv you would parse.")
 

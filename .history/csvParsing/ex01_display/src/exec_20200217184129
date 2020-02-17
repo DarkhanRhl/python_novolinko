@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-
-#Référence de la classe CsvHandler contenue dans le fichier csvHandler.py
 from csvReader import CsvReader
 
 def main():
     #Recuperation de la class CsvReader dans la variable csv
     csv = CsvReader()
-
-    #Appelle la fonction read
     csv.read()
 
 if __name__=="__main__":

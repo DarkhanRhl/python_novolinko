@@ -4,11 +4,10 @@ from csvHandler import CsvHandler
 
 def main():
     csv = CsvHandler()
-    #Modification de la gestion d'erreur pour ne pas bloquer
-    #Les erreurs relatives à la classe appellé
-    if len(sys.argv) < 2:
+    try:
+        csv.read(sys.argv[1])
+    except:
         print("Please enter the csv you would parse.")
-    csv.read(sys.argv[1])
 
 if __name__=="__main__":
     main()
