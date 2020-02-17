@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+from csvHandler import CsvHandler
+
+def main():
+    csv = CsvHandler()
+    csv.read()
+
+if __name__=="__main__":
+    main()
