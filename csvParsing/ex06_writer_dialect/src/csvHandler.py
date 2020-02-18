@@ -1,4 +1,5 @@
 import csv
+from csvMyDialect import CsvMyDialect
 
 class CsvHandler:
 
@@ -6,6 +7,7 @@ class CsvHandler:
     def __init__(self, name):
         #Definition d'une variable inhérente à cette classe
         #qui pourra être appellé dans n'importe quels fonctions
+        csv.register_dialect('my-dialect', CsvMyDialect())
         self.fname = name
 
     def write(self):
@@ -13,12 +15,13 @@ class CsvHandler:
         #dans notre méthode __init__
         file = open(self.fname, "w")
 
-        writer = csv.writer(file)
+        writer = csv.writer(file, 'my-dialect')
         writer.writerow(('test1', 'test2', 'test3'))
         writer.writerow(range(0,3))       # intervalle
-        writer.writerow("abc")            # chaîne
+        writer.writerow("abc")           # chaîne
         writer.writerow([20, 21, 22])     # liste
         writer.writerow((30, 31, 32))     # tupple
+        writer.writerow( [20.80, "xyz", "X|Y|Z","A'B'C"] )
         file.close()
 
     def read(self):
