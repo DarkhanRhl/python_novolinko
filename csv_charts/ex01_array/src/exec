@@ -3,11 +3,11 @@ import sys
 from csvHandler import CsvHandler
 
 def main():
-    csv = CsvHandler()
     if len(sys.argv) < 2:
         print("Please enter the csv you would parse.")
-    else:
-        csv.write(sys.argv[1])
+        return
+    csv = CsvHandler(sys.argv[1])
+    csv.handler()
 
 if __name__=="__main__":
     main()
