@@ -27,7 +27,6 @@ class ChartHandler:
         vm = df['virtual-memory']
         cpu = df['cpu']
         xs.append(dt.datetime.now().strftime('%H:%M:%S'))
-        # xs.append(vm[len(vm) - 1])
         ys.append(vm[len(cpu) - 1])
 
         # Limit x and y lists to 50 items
@@ -43,9 +42,7 @@ class ChartHandler:
         plt.subplots_adjust(bottom=0.30)
         plt.title('Cpu consumption over Time')
         plt.ylabel('Cpu')
-        time.sleep(2)
-
-        # Set up plot to call animate() function periodically
+        time.sleep(2.6)
 
     def handler(self):
         self.cih = ComputerMonitoring()
