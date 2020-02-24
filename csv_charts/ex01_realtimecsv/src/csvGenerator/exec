@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 import sys
-from csvHandler import CsvHandler
+from generatorHandler import GeneratorHandler
 
 def main():
     if len(sys.argv) < 2:
         print("Please enter the csv you would parse.")
         return
-    csv = CsvHandler(sys.argv[1])
-    csv.handler()
+    chart = GeneratorHandler(sys.argv[1])
+    chart.handler()
 
 if __name__=="__main__":
     main()

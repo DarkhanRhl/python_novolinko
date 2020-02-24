@@ -29,15 +29,9 @@ class ChartHandler:
         xs.append(dt.datetime.now().strftime('%H:%M:%S'))
         ys.append(vm[len(cpu) - 1])
 
-        # Limit x and y lists to 50 items
-        xs = xs[-50:]
-        ys = ys[-50:]
-
-        # Draw x and y lists
         self.ax.clear()
         self.ax.plot(xs, ys)
 
-        # Format plot
         plt.xticks(rotation=45, ha='right')
         plt.subplots_adjust(bottom=0.30)
         plt.title('Cpu consumption over Time')
@@ -47,7 +41,6 @@ class ChartHandler:
     def handler(self):
         self.cih = ComputerMonitoring()
         self.csv = CsvHandler()
-        # self.animate(0, 0, 0)
         self.fig = plt.figure()
         self.ax = self.fig.add_subplot(1, 1, 1)
         xs = []

@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+import sys
+from gameHandler import GameHandler
+from strat import Strategie
+
+def main():
+    gamehandler = GameHandler()
+    strategie = Strategie(True)
+    print("Le joueur a t-il gagné :", gamehandler.play(strategie.CHANGER))
+
+if __name__=="__main__":
+    main()
