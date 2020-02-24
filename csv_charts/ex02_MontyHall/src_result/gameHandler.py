@@ -4,9 +4,6 @@
 from random import randint, seed
 from strat import Strategie
 
-# Pour pouvoir afficher des graphiques:
-import matplotlib.pyplot as plt
-
 seed()
 
 class GameHandler:
@@ -34,6 +31,7 @@ class GameHandler:
             else:
                 raise ValueError("Stratégie non reconnue!")
             return deuxieme_choix == bonne_porte
+            #TODO ajoutez les graphiques (voir openClassroom)
 
 
 

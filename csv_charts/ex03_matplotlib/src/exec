@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+import sys
+from graph import Graph
+
+def main():
+    graph = Graph()
+    graph.handler()
+
+
+if __name__=="__main__":
+    main()

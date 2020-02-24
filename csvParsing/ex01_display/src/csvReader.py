@@ -4,7 +4,7 @@ class CsvReader:
 
     def read(self):
         #Definit le chemin vers le fichier csv
-        fname = "./ressources/test.csv"
+        fname = "../ressources/test.csv"
 
         #Ouvre le fichier csv avec le mode lecture et le stocke dans la variable file
         file = open(fname, "r")

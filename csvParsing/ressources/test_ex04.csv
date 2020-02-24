@@ -1,6 +1,4 @@
-'test1'|'test2'|'test3'
-0|1|2
-'a'|'b'|'c'
-20|21|22
-30|31|32
-20.8|'xyz'|'X|Y|Z'|'A\'B\'C'
+Heure,Température
+8.34,7 degrès celsius
+11.4,11 degrès celsius
+14.45,15 degrès celsius

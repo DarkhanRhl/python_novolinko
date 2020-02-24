@@ -5,8 +5,11 @@ from strat import Strategie
 
 def main():
     gamehandler = GameHandler()
-    strategie = Strategie(True)
-    print("Le joueur a t-il gagné :", gamehandler.play(strategie.CHANGER))
+    print("En changeant de porte, le joueur a gagné {} sur 10000 parties."
+      .format(sum(gamehandler.play(Strategie.CHANGER, 10000))))
+      
+    print("En gardant son choix initial, le joueur a gagné {} sur 10000 parties."
+      .format(sum(gamehandler.play(Strategie.GARDER, 10000))))
 
 if __name__=="__main__":
     main()

@@ -8,7 +8,8 @@ def main():
     #Les erreurs relatives à la classe appellé
     if len(sys.argv) < 2:
         print("Please enter the csv you would parse.")
-    csv.read(sys.argv[1])
+    else:
+        csv.read(sys.argv[1])
 
 if __name__=="__main__":
     main()

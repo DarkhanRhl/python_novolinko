@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+import sys
+from chartHandler import ChartHandler
+
+def main():
+    if len(sys.argv) < 2:
+        print("Please enter the csv you would parse.")
+        return
+    chart = ChartHandler(sys.argv[1])
+    chart.handler()
+
+if __name__=="__main__":
+    main()
