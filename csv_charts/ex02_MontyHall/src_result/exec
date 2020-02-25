@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 def main():
     gamehandler = GameHandler()
     #BAD METHOD, relier les points entre eux creer de la confusion dans l'analyse
-    plot = plt.plot(gamehandler.play(Strategie.CHANGER, 100))
+    # plot = plt.plot(gamehandler.play(Strategie.CHANGER, 100))
 
     #BAD METHOD, ici, les points ne sont pas relié entre eux mais
     #le graphique n'est pas vraiment comprehensible...
@@ -22,15 +22,15 @@ def main():
     #GOOD METHOD, la meilleur methode.
     #Elle consiste à faire des échantillons et comparer les resultats entre chaques
     #échantillons pour avoir des courbes évolutives !
-    # gains_changer = []
-    # gains_garder = []
-    # samples =  [1000, 10000, 20000, 50000, 80000, 100000]
-    # for tours in samples:
-    #     gains_changer.append(gamehandler.play(Strategie.CHANGER, tours))
-    #     gains_garder.append(gamehandler.play(Strategie.GARDER, tours))
-    # figure = plt.figure()
-    # plot = plt.scatter(samples, [sum(x) for x in gains_changer])
-    # plot = plt.scatter(samples, [sum(x) for x in gains_garder])
+    gains_changer = []
+    gains_garder = []
+    samples =  [1000, 10000, 20000, 50000, 80000, 100000]
+    for tours in samples:
+        gains_changer.append(gamehandler.play(Strategie.CHANGER, tours))
+        gains_garder.append(gamehandler.play(Strategie.GARDER, tours))
+    figure = plt.figure()
+    plot = plt.scatter(samples, [sum(x) for x in gains_changer])
+    plot = plt.scatter(samples, [sum(x) for x in gains_garder])
     plt.show()
 
 if __name__=="__main__":
