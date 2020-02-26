@@ -2,12 +2,11 @@ import csv
 from csvMyDialect import CsvMyDialect
 
 class CsvHandler:
-
     #fonction init appellé a la creation de la classe dans le fichier exec
     def __init__(self, name):
         #Definition d'une variable inhérente à cette classe
         #qui pourra être appellé dans n'importe quels fonctions
-        csv.register_dialect('my-dialect', CsvMyDialect())
+        # csv.register_dialect('my-dialect', CsvMyDialect())
         self.fname = name
 
     def write(self):
@@ -30,6 +29,7 @@ class CsvHandler:
         for row in reader:
             print(row)
         file.close()
+    
 
     def handler(self):
         print("\n-------- Premiere lecture --------\n")

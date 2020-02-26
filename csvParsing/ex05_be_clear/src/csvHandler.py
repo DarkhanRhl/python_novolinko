@@ -1,7 +1,6 @@
 import csv
 
 class CsvHandler:
-
     #fonction init appellé a la creation de la classe dans le fichier exec
     def __init__(self, name):
         #Definition d'une variable inhérente à cette classe
